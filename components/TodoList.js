@@ -1,5 +1,5 @@
 import { ScrollView,StyleSheet, View } from "react-native";
-import { Text, ToggleButton } from "react-native-paper";
+import { Text, ToggleButton, Divider } from "react-native-paper";
 import { useState } from "react";
 import TodoItem from './TodoItem';
 import FilterBtn from './FilterBtn';
@@ -79,7 +79,9 @@ const TodoList = () => {
                 ?   <ScrollView style={{paddingLeft: 18}}>{taskList}</ScrollView>  
                 :   <ScrollView style={{paddingTop: 50}}>
                         <Text variant="titleLarge" style={{textAlign: 'center'}}>your list is empty</Text>
-                    </ScrollView>}
+                    </ScrollView>
+            }
+            <Divider horizontalInset={true} />
             <View style={styles.bottomBtns}>
                 <ToggleButton.Row 
                     value={value} 
@@ -108,9 +110,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center', 
         paddingTop: 20, 
         paddingBottom: 10,
-        borderTopColor: 'gray',
-        borderTopWidth: 1,
-        width: '93%'
+        // borderTopColor: 'gray',
+        // borderTopWidth: 1,
+        // width: '93%'
     }
 })
 

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { List, Checkbox, IconButton } from "react-native-paper";
-import { View } from "react-native";
 
 const TodoItem = ({ todo, remove, toggle }) => {
     const [checked, setChecked] = useState(false);
