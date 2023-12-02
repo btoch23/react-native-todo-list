@@ -51,10 +51,10 @@ const TodoList = () => {
         .map((todo) => (
             <>
                 <TodoItem 
-                todo={todo}
-                key={todo.id}
-                remove={removeTodo}
-                toggle={toggleTodo}
+                    todo={todo}
+                    key={todo.id}
+                    remove={removeTodo}
+                    toggle={toggleTodo}
                 />
                 <Divider horizontalInset={true} key={uuid.v4()} />
             </>
