@@ -1,5 +1,5 @@
 import { ScrollView,StyleSheet, View } from "react-native";
-import { Text, ToggleButton, Divider, SegmentedButtons } from "react-native-paper";
+import { Text, Divider, SegmentedButtons } from "react-native-paper";
 import { useState } from "react";
 import TodoItem from './TodoItem';
 import TodoForm from './TodoForm'
