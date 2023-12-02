@@ -1,8 +1,7 @@
 import { ScrollView,StyleSheet, View } from "react-native";
-import { Text, ToggleButton, Divider } from "react-native-paper";
+import { Text, ToggleButton, Divider, SegmentedButtons } from "react-native-paper";
 import { useState } from "react";
 import TodoItem from './TodoItem';
-import FilterBtn from './FilterBtn';
 import TodoForm from './TodoForm'
 import uuid from 'react-native-uuid';
 
@@ -14,21 +13,10 @@ const FILTER_MAP = {
     Completed: (todo) => todo.completed
 }
 
-const FILTER_NAMES = Object.keys(FILTER_MAP);
-
 const TodoList = () => {
     const [todos, setTodos] = useState(initialTodos);
     const [filter, setFilter] = useState('All');
-    const [value, setValue] = useState('All')
-
-    const filterList = FILTER_NAMES.map((name) => (
-        <FilterBtn 
-            key={name}
-            name={name}
-            isPressed={name === filter}
-            setFilter={setFilter}
-        />
-    ))
+    const [value, setValue] = useState('All');
 
     const removeTodo = (id) => {
         setTodos((prevTodos) => {
@@ -83,13 +71,29 @@ const TodoList = () => {
             }
             <Divider horizontalInset={true} />
             <View style={styles.bottomBtns}>
-                <ToggleButton.Row 
-                    value={value} 
-                    onValueChange={value => setValue(value)}
-                    style={{justifyContent: 'space-between'}}
-                >
-                    {filterList}
-                </ToggleButton.Row>
+                <SegmentedButtons 
+                    value={filter}
+                    onValueChange={setFilter}
+                    theme={{ 
+                        colors: { 
+                            secondaryContainer: '#f7b9a1' 
+                        }
+                    }}
+                    buttons={[
+                        {
+                            value: 'All',
+                            label: 'All',
+                        },
+                        {
+                            value: 'Active',
+                            label: 'Active',
+                        },
+                        {
+                            value: 'Completed',
+                            label: 'Completed',
+                        },
+                    ]}
+                />
             </View>
         </View>
     )
@@ -105,14 +109,10 @@ const styles = StyleSheet.create({
         color: 'white'
     },
     bottomBtns: {
-        alignSelf: 'center',
-        flexDirection: 'row', 
         justifyContent: 'center', 
         paddingTop: 20, 
         paddingBottom: 10,
-        // borderTopColor: 'gray',
-        // borderTopWidth: 1,
-        // width: '93%'
+        paddingHorizontal: 15
     }
 })
 
