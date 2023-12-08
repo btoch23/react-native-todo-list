@@ -67,9 +67,7 @@ const TodoList = () => {
             </Text>
             <TodoForm addTodo={addTodo} />
             {todos.length !== 0 
-                ?   <ScrollView 
-                        style={{paddingLeft: 0}}
-                    >
+                ?   <ScrollView>
                         {taskList}
                     </ScrollView>  
                 :   <ScrollView style={{paddingTop: 50}}>
