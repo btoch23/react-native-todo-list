@@ -16,7 +16,6 @@ const FILTER_MAP = {
 const TodoList = () => {
     const [todos, setTodos] = useState(initialTodos);
     const [filter, setFilter] = useState('All');
-    const [value, setValue] = useState('All');
 
     const removeTodo = (id) => {
         setTodos((prevTodos) => {

@@ -23,7 +23,7 @@ const TodoItem = ({ todo, remove, toggle }) => {
                     onPress={() =>
                         Alert.alert(
                             'Delete Task?',
-                            'Are you sure you want to delete this task?',
+                            `Are you sure you want to delete the task "${todo.text}"?`,
                             [
                                 {
                                     text: 'Cancel',
