@@ -1,6 +1,6 @@
 # Overview
 
-A straightforward mobile todo list built with React Native and React Native Paper. Users can add tasks, mark them as completed and, by swiping left, delete them. Buttons at the bottom of the screen allow the user to filter their list based on the status of their tasks
+A straightforward mobile todo list built with React Native and React Native Paper. Users can add tasks, mark them as completed, and, by swiping left, delete them. Buttons at the bottom of the screen allow the user to filter their list based on the status of their tasks
 
 # Components
 
