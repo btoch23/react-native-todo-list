@@ -48,15 +48,12 @@ const TodoList = () => {
     const taskList = todos
         .filter(FILTER_MAP[filter])
         .map((todo) => (
-            <>
-                <TodoItem 
-                    todo={todo}
-                    key={todo.id}
-                    remove={removeTodo}
-                    toggle={toggleTodo}
-                />
-                <Divider horizontalInset={true} key={uuid.v4()} />
-            </>
+            <TodoItem 
+                todo={todo}
+                key={todo.id}
+                remove={removeTodo}
+                toggle={toggleTodo}
+            />
         ))
 
     return (

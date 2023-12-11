@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Checkbox, Icon } from "react-native-paper";
+import { Checkbox, Icon, Divider } from "react-native-paper";
 import { SwipeRow } from 'react-native-swipe-list-view';
 import { Alert, TouchableOpacity, StyleSheet, Text, View } from "react-native";
 
@@ -56,6 +56,7 @@ const TodoItem = ({ todo, remove, toggle }) => {
                     color="#eb5e28"
                     uncheckedColor="#eb5e28"
                 />
+                <Divider horizontalInset />
             </View>
         </SwipeRow>
     )
