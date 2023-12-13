@@ -34,6 +34,7 @@ A straightforward mobile todo list built with React Native and React Native Pape
     <li>React Native Paper</li>
     <li>React Native Swipe List View</li>
   </ul>
+  
 # Contact
 
 email: brian.toch23@gmail.com
