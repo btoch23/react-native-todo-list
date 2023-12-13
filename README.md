@@ -21,16 +21,19 @@ A straightforward mobile todo list built with React Native and React Native Pape
   </li>
 </ul>
 
-# Technologies Used
+# Technologies
 
 <ul>
   <li>React Native</li>
   <li>Javascript</li>
-  <li>React Native Paper</li>
-  <li>React Native Swipe List View</li>
   <li>Expo</li>
 </ul>
 
+# Libraries
+  <ul>
+    <li>React Native Paper</li>
+    <li>React Native Swipe List View</li>
+  </ul>
 # Contact
 
 email: brian.toch23@gmail.com
