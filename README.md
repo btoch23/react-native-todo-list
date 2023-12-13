@@ -11,7 +11,7 @@ A straightforward mobile todo list built with React Native and React Native Pape
   <img src='https://github.com/btoch23/react-native-todo-list/assets/143453855/f0e08e11-c81d-463f-9457-54d44106fd0b' />
 </div>
 
-# Components
+# Custom Components
 
 <ul>
   <li>TodoItem: Each individual task that the user adds</li>
